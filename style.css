@@ -1,0 +1,485 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    font-family: "Poppins", sans-serif;
+}
+body {
+    background-color: #1a1c2b;
+}
+.line{
+    border: 1px solid white;
+}
+.bold{
+    font-weight: bold;
+}
+
+/* Header */
+header {
+    height: 80px;
+    background: white;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 100px;
+    position: relative;
+    z-index: 1000; /* Ensure header is on top of other content */
+}
+
+.page-head {
+    font-size: 28px;
+    text-decoration: none;
+    color: black;
+}
+
+.hamburger {
+    display: none;
+}
+
+.nav-bar ul {
+    display: flex;
+}
+
+.nav-bar ul li {
+    list-style: none;
+}
+
+.nav-bar ul li a {
+    display: block;
+    color: black;
+    font-size: 20px;
+    padding: 10px 25px;
+    border-radius: 50px;
+    transition: 0.2s;
+    margin: 0 5px;
+    text-decoration: none;
+}
+
+.nav-bar ul li a:hover {
+    color: white;
+    background: black;
+}
+
+.nav-bar ul li a.active {
+    color: white;
+    background: black;
+}
+
+@media only screen and (max-width: 1320px) {
+    header {
+        padding: 0 50px;
+    }
+}
+
+@media only screen and (max-width: 1100px) {
+    header {
+        padding: 0 30px;
+    }
+}
+
+@media only screen and (max-width: 932px) {
+    .hamburger {
+        display: block;
+        cursor: pointer;
+    }
+
+    .hamburger .line {
+        width: 30px;
+        height: 3px;
+        background: black;
+        margin: 6px 0;
+    }
+
+    .nav-bar {
+        height: 0;
+        position: fixed;
+        top: 80px;
+        left: 0;
+        right: 0;
+        width: 100vw;
+        background: white;
+        transition: height 0.2s ease;
+        overflow: hidden;
+        z-index: 999; /* Ensure nav-bar is on top of other content */
+    }
+
+    .nav-bar.active {
+        height: calc(100vh - 80px);
+    }
+
+    .nav-bar ul {
+        display: block;
+        width: fit-content;
+        margin: 0 auto;
+        padding-top: 20px;
+        text-align: center;
+        transition: opacity 0.5s ease;
+        opacity: 0;
+    }
+
+    .nav-bar.active ul {
+        opacity: 1;
+    }
+
+    .nav-bar ul li a {
+        margin-bottom: 12px;
+        color: black;
+    }
+}
+
+
+/* Home Page Starts */
+#home {
+    justify-content: center;
+    height: 92vh;
+    background-color: #1a1c2b;
+    color: white;
+}
+#home .home-head {
+    font-size: 80px;
+    padding-top: 120px;
+    padding-left: 60px;
+}
+#home .home-head-2 {
+    font-size: 80px;
+    padding-left: 60px;
+    margin-top: 0px;
+}
+#home .home-frame, .home-photo{
+    position: absolute;
+    right: 100px;
+    top: 17vh;
+}
+#home img{
+    height: 500px;
+}
+/* Home Page Ends */
+
+/* About Page Starts */
+#about {
+    border: 1px solid #1a1c2b;
+    height: 100vh;
+}
+#about .abt-box {
+    width: 82%;
+    height: 55%;
+    margin: 200px auto;
+    color: white;
+    background-color: #1a1c2b;
+    box-sizing: border-box;
+    border-radius: 14px;
+    box-shadow: 0 0 60px black;
+}
+#about .about_head {
+    padding: 30px 0px 0px 30px;
+    font-size: 60px;
+    margin-bottom: 15px;
+}
+#about .about_body {
+    padding: 0px 30px 0px 30px;
+    font-size: 26px;
+    text-align: justify;
+}
+/* About Page Ends */
+
+
+/* Achievements Page Starts */
+#achievements {
+    border: 1px solid #1a1c2b;
+    height: 100vh;
+}
+#achievements .ach-box {
+    width: 82%;
+    height: 55%;
+    margin: 200px auto;
+    color: white;
+    background-color: #1a1c2b;
+    box-sizing: border-box;
+    border-radius: 14px;
+    box-shadow: 0 0 50px black;
+}
+#achievements .ach_head {
+    padding: 30px 0px 0px 30px;
+    font-size: 60px;
+    margin-bottom: 15px;
+}
+
+#achievements .ach_body {
+    padding: 0px 30px 0px 30px;
+    font-size: 26px;
+    text-align: justify;
+}
+/* Achievements End */
+
+
+/* Projects page starts */
+#projects{
+    border: 1px solid #1a1c2b;
+    height: 100vh;
+    color: white;
+}
+#projects .pro-head{
+    margin-top: 80px;
+    font-size: 60px;
+    color: white;
+    text-align: center;
+}
+#projects .pro-boxes{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    margin: auto;
+}
+#projects .pro-box{
+    height: 65vh;
+    width: 25%;
+    margin: 50px 0 0 60px;
+    border-radius: 12px;
+    box-sizing: border-box;
+    background-color: #26283a;
+    box-sizing: border-box;
+    box-shadow: 0 0 30px black;
+}
+#projects .pro-box img{
+    padding-left: 20px;
+    padding-top: 20px;
+    border-radius: 12px;
+}
+#projects .pro-body{
+    margin: 20px 28px 0 25px;
+    font-size: 16px;
+    text-align: justify;
+}
+#projects .pro-buttons{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+}
+#projects .pro-but{
+    margin-top: 20px;
+    margin-left: 8px;
+    background-color: darkblue;
+    border-color: 0px solid blue;
+    padding: 8px;
+    border-radius: 12px;
+}
+#projects .pro-but:hover{
+    opacity: 80%;
+}
+#projects .pro-but a{
+    text-decoration: none;
+    color: white;
+    font-size: 15px;
+}
+/* Projects Page end here */
+
+
+/* Contact Page Starts */
+#contact{
+    border: 1px solid #1a1c2b;
+    height: 100vh;
+    color: white;
+    align-items: center;
+    margin: 0 auto;
+}
+#contact .con-head{
+    margin-top: 80px;
+    font-size: 60px;
+    text-align: center;
+    margin-bottom: 35px;
+}
+#contact .con-form{
+    background-color: #26283a;
+    margin: 0 auto;
+    padding: 20px;
+    border-radius: 14px;
+    box-shadow: 0 0 50px black;
+    width: 50%;
+    height: 50%;
+}
+#contact input{
+    width: 95%;
+    padding: 16px 16px;
+    font-size: 20px;
+    border-radius: 10px;
+    margin-bottom: 20px;
+    margin-left: 1%;
+    background-color: #1a1c2b;
+    border: 1px solid white;
+    color: white;
+}
+#contact textarea{
+    width: 95%;
+    font-size: 20px;
+    padding: 16px 16px;
+    border-radius: 10px;
+    margin-bottom: 20px;
+    margin-left: 1%;
+    background-color: #1a1c2b;
+    border: 1px solid white;
+    color: white;
+}
+#contact textarea::placeholder, input::placeholder{
+    color: white;
+}
+#contact textarea:focus-within, #contact input:focus-within{
+    outline: none;
+    border-color: wheat;
+    border-width: 3px;
+}
+#contact .con-but{
+    background-color: darkblue;
+    border-radius: 14px;
+    border-color: 0px solid white;
+    padding: 10px 130px;
+    display: flex;
+    margin: auto;
+    text-align: center;
+    cursor: pointer;
+}
+#contact .con-but:hover{
+    opacity: 80%;
+}
+#contact .con-but a{
+    font-size: 22px;
+    text-decoration: none;
+    color: white;
+}
+/* Contact Page Ends Here */
+
+/* Footer Starts */
+footer {
+    background-color: white;
+    color: black;
+    padding: 20px 0;
+    text-align: center;
+}
+.footer-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+.footer-section {
+    flex: 1;
+    margin: 15px 15px;
+}
+.footer-section h3 {
+    border-bottom: 2px solid #444;
+    padding-bottom: 10px;
+    margin-bottom: 10px;
+}
+.footer-section p {
+    line-height: 1.6;
+    text-align: center;
+}
+.footer-section a {
+    color: black;
+    text-decoration: none;
+}
+.footer-section a:hover {
+    text-decoration: underline;
+}
+.footer-bottom {
+    text-align: center;
+    padding: 10px 0;
+    border-top: 1px solid #444;
+    margin-top: 20px;
+}
+/* Footer Ends */
+
+/* Media Query Starts */
+@media screen and (max-width: 932px) {
+    #home {
+        margin: 0;
+        width: 99vw;
+        text-align: left;
+        height: 60vh;
+        text-align: center;
+    }
+    #home .home-head {
+        padding-left: 10px;
+        padding-top: 10%;
+        font-size: 35px;
+    }
+    #home .home-head-2 {
+        font-size: 35px;
+        padding-left: 10px;
+    }
+    #home .home-frame, .home-photo{
+        margin-top: 30px;
+        position: static;
+    }
+    #home img{
+        height: 200px;
+    }
+    #about{
+        height: 106vh;
+    }
+    #about .abt-box{
+        height: 92vh;
+        margin: 60px auto;
+    }
+    #achievements{
+        height: 68vh;
+    }
+    #achievements .ach-box{
+        height: 53vh;
+        margin: 60px auto;
+    }
+    #about .about_head, #achievements .ach_head, #projects .pro-head, #contact .con-head{
+        font-size: 30px;
+        margin-bottom: 10px;
+    }
+    #about .about_body, #achievements .ach_body {
+        font-size: 18px;
+    }
+    #projects{
+        height: 255vh;
+    }
+    #projects .pro-head{
+        margin-top: 45px;
+    }
+    #projects .pro-boxes{
+        flex-direction: column;
+    }
+    #projects .pro-box{
+        width: 83%;
+        margin: 30px auto;
+        height: 73vh;
+    }
+    #contact{
+        height: 70vh;
+    }
+    #contact .con-head{
+        margin-top: 45px;
+        margin-bottom: 20px;
+    }
+    #contact .con-form{
+        width: 80%;
+        height: 65%;
+    }
+    #contact input{
+        width: 90%;
+        font-size: 16px;
+    }
+    #contact textarea{
+        width: 90%;
+        font-size: 16px;
+    }
+    #contact .con-but{
+        background-color: darkblue;
+        border-radius: 14px;
+        border-color: 0px solid white;
+        padding: 10px 124px;
+        display: flex;
+        margin: auto;
+        text-align: center;
+        cursor: pointer;
+    }
+}
